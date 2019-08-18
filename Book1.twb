@@ -1,0 +1,1239 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.17.0915.2112                               -->
+<workbook original-version='10.4' source-build='10.4.0 (10400.17.0915.2112)' source-platform='mac' version='10.4' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Unique_viewers' inline='true' name='federated.1wqws780mzxyn91frg8qa0jee2gi' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='downloaders' name='textscan.0voofp41y9dp6e1gjikzg136e5xr'>
+            <connection class='textscan' directory='/Users/mayurakshilondhe/Desktop/Last_project' filename='downloaders.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[projects 2.csv].[project_id]' />
+              <expression op='[viewers.csv].[project_id]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0voofp41y9dp6e1gjikzg136e5xr' name='projects 2.csv' table='[projects 2#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='project_id' ordinal='0' />
+              <column datatype='integer' name='user_id' ordinal='1' />
+              <column datatype='datetime' name='date_created' ordinal='2' />
+              <column datatype='integer' name='viewers_website' ordinal='3' />
+              <column datatype='string' name='lovers_website' ordinal='4' />
+              <column datatype='integer' name='downloaders_website' ordinal='5' />
+              <column datatype='string' name='sprites_website' ordinal='6' />
+              <column datatype='string' name='scripts_website' ordinal='7' />
+              <column datatype='string' name='parent_project_id' ordinal='8' />
+              <column datatype='string' name='parent_user_id' ordinal='9' />
+              <column datatype='boolean' name='locked' ordinal='10' />
+              <column datatype='boolean' name='is_remix' ordinal='11' />
+              <column datatype='boolean' name='is_self_remix' ordinal='12' />
+              <column datatype='boolean' name='is_remixed' ordinal='13' />
+              <column datatype='integer' name='blocks' ordinal='14' />
+              <column datatype='integer' name='block_types' ordinal='15' />
+              <column datatype='integer' name='images' ordinal='16' />
+              <column datatype='integer' name='sounds' ordinal='17' />
+              <column datatype='string' name='ugstrings' ordinal='18' />
+              <column datatype='string' name='saves' ordinal='19' />
+              <column datatype='string' name='seconds_to_share' ordinal='20' />
+              <column datatype='integer' name='seconds_to_remix' ordinal='21' />
+              <column datatype='string' name='is_remix_identical' ordinal='22' />
+              <column datatype='string' name='is_remix_identical_media' ordinal='23' />
+              <column datatype='string' name='is_remix_identical_code_and_strings' ordinal='24' />
+              <column datatype='string' name='is_remix_identical_code' ordinal='25' />
+              <column datatype='string' name='remix_added_images' ordinal='26' />
+              <column datatype='string' name='remix_deleted_images' ordinal='27' />
+              <column datatype='string' name='remix_changed_images' ordinal='28' />
+              <column datatype='string' name='remix_added_sounds' ordinal='29' />
+              <column datatype='string' name='remix_deleted_sounds' ordinal='30' />
+              <column datatype='string' name='remix_changed_sounds' ordinal='31' />
+              <column datatype='string' name='remix_editdistance_code_and_strings' ordinal='32' />
+              <column datatype='string' name='remix_editdistance_code' ordinal='33' />
+              <column datatype='string' name='remix_editdistance_media' ordinal='34' />
+              <column datatype='string' name='remix_editdistance_images' ordinal='35' />
+              <column datatype='string' name='remix_editdistance_sounds' ordinal='36' />
+              <column datatype='string' name='remix_derivativeness' ordinal='37' />
+              <column datatype='string' name='remix_derivativeness_images' ordinal='38' />
+              <column datatype='string' name='remix_derivativeness_sounds' ordinal='39' />
+              <column datatype='string' name='remix_derivativeness_blocks' ordinal='40' />
+              <column datatype='string' name='remix_derivativeness_text' ordinal='41' />
+              <column datatype='string' name='remix_derivativeness_parameters' ordinal='42' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0voofp41y9dp6e1gjikzg136e5xr' name='viewers.csv' table='[viewers#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='project_id' ordinal='0' />
+              <column datatype='datetime' name='date_viewed' ordinal='1' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[block_types]' value='[projects 2.csv].[block_types]' />
+          <map key='[blocks]' value='[projects 2.csv].[blocks]' />
+          <map key='[date_created]' value='[projects 2.csv].[date_created]' />
+          <map key='[date_viewed]' value='[viewers.csv].[date_viewed]' />
+          <map key='[downloaders_website]' value='[projects 2.csv].[downloaders_website]' />
+          <map key='[images]' value='[projects 2.csv].[images]' />
+          <map key='[is_remix]' value='[projects 2.csv].[is_remix]' />
+          <map key='[is_remix_identical]' value='[projects 2.csv].[is_remix_identical]' />
+          <map key='[is_remix_identical_code]' value='[projects 2.csv].[is_remix_identical_code]' />
+          <map key='[is_remix_identical_code_and_strings]' value='[projects 2.csv].[is_remix_identical_code_and_strings]' />
+          <map key='[is_remix_identical_media]' value='[projects 2.csv].[is_remix_identical_media]' />
+          <map key='[is_remixed]' value='[projects 2.csv].[is_remixed]' />
+          <map key='[is_self_remix]' value='[projects 2.csv].[is_self_remix]' />
+          <map key='[locked]' value='[projects 2.csv].[locked]' />
+          <map key='[lovers_website]' value='[projects 2.csv].[lovers_website]' />
+          <map key='[parent_project_id]' value='[projects 2.csv].[parent_project_id]' />
+          <map key='[parent_user_id]' value='[projects 2.csv].[parent_user_id]' />
+          <map key='[project_id (viewers.csv)]' value='[viewers.csv].[project_id]' />
+          <map key='[project_id]' value='[projects 2.csv].[project_id]' />
+          <map key='[remix_added_images]' value='[projects 2.csv].[remix_added_images]' />
+          <map key='[remix_added_sounds]' value='[projects 2.csv].[remix_added_sounds]' />
+          <map key='[remix_changed_images]' value='[projects 2.csv].[remix_changed_images]' />
+          <map key='[remix_changed_sounds]' value='[projects 2.csv].[remix_changed_sounds]' />
+          <map key='[remix_deleted_images]' value='[projects 2.csv].[remix_deleted_images]' />
+          <map key='[remix_deleted_sounds]' value='[projects 2.csv].[remix_deleted_sounds]' />
+          <map key='[remix_derivativeness]' value='[projects 2.csv].[remix_derivativeness]' />
+          <map key='[remix_derivativeness_blocks]' value='[projects 2.csv].[remix_derivativeness_blocks]' />
+          <map key='[remix_derivativeness_images]' value='[projects 2.csv].[remix_derivativeness_images]' />
+          <map key='[remix_derivativeness_parameters]' value='[projects 2.csv].[remix_derivativeness_parameters]' />
+          <map key='[remix_derivativeness_sounds]' value='[projects 2.csv].[remix_derivativeness_sounds]' />
+          <map key='[remix_derivativeness_text]' value='[projects 2.csv].[remix_derivativeness_text]' />
+          <map key='[remix_editdistance_code]' value='[projects 2.csv].[remix_editdistance_code]' />
+          <map key='[remix_editdistance_code_and_strings]' value='[projects 2.csv].[remix_editdistance_code_and_strings]' />
+          <map key='[remix_editdistance_images]' value='[projects 2.csv].[remix_editdistance_images]' />
+          <map key='[remix_editdistance_media]' value='[projects 2.csv].[remix_editdistance_media]' />
+          <map key='[remix_editdistance_sounds]' value='[projects 2.csv].[remix_editdistance_sounds]' />
+          <map key='[saves]' value='[projects 2.csv].[saves]' />
+          <map key='[scripts_website]' value='[projects 2.csv].[scripts_website]' />
+          <map key='[seconds_to_remix]' value='[projects 2.csv].[seconds_to_remix]' />
+          <map key='[seconds_to_share]' value='[projects 2.csv].[seconds_to_share]' />
+          <map key='[sounds]' value='[projects 2.csv].[sounds]' />
+          <map key='[sprites_website]' value='[projects 2.csv].[sprites_website]' />
+          <map key='[ugstrings]' value='[projects 2.csv].[ugstrings]' />
+          <map key='[user_id]' value='[projects 2.csv].[user_id]' />
+          <map key='[viewers_website]' value='[projects 2.csv].[viewers_website]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>project_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[project_id]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>project_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_created</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_created]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>date_created</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>viewers_website</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[viewers_website]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>viewers_website</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lovers_website</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[lovers_website]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>lovers_website</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>downloaders_website</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[downloaders_website]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>downloaders_website</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sprites_website</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sprites_website]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>sprites_website</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scripts_website</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[scripts_website]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>scripts_website</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>parent_project_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[parent_project_id]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>parent_project_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>parent_user_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[parent_user_id]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>parent_user_id</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>locked</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[locked]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>locked</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_remix</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_remix]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>is_remix</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_self_remix</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_self_remix]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>is_self_remix</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_remixed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_remixed]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>is_remixed</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>blocks</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[blocks]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>blocks</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>block_types</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[block_types]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>block_types</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>images</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[images]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>images</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sounds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sounds]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>sounds</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ugstrings</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ugstrings]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>ugstrings</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>saves</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[saves]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>saves</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seconds_to_share</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[seconds_to_share]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>seconds_to_share</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seconds_to_remix</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seconds_to_remix]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>seconds_to_remix</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_remix_identical</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[is_remix_identical]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>is_remix_identical</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_remix_identical_media</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[is_remix_identical_media]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>is_remix_identical_media</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_remix_identical_code_and_strings</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[is_remix_identical_code_and_strings]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>is_remix_identical_code_and_strings</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_remix_identical_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[is_remix_identical_code]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>is_remix_identical_code</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_added_images</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_added_images]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_added_images</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_deleted_images</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_deleted_images]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_deleted_images</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_changed_images</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_changed_images]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_changed_images</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_added_sounds</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_added_sounds]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_added_sounds</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_deleted_sounds</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_deleted_sounds]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_deleted_sounds</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_changed_sounds</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_changed_sounds]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_changed_sounds</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_editdistance_code_and_strings</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_editdistance_code_and_strings]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_editdistance_code_and_strings</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_editdistance_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_editdistance_code]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_editdistance_code</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_editdistance_media</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_editdistance_media]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_editdistance_media</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_editdistance_images</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_editdistance_images]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_editdistance_images</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_editdistance_sounds</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_editdistance_sounds]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_editdistance_sounds</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_derivativeness</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_derivativeness]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_derivativeness</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_derivativeness_images</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_derivativeness_images]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_derivativeness_images</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_derivativeness_sounds</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_derivativeness_sounds]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_derivativeness_sounds</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_derivativeness_blocks</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_derivativeness_blocks]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_derivativeness_blocks</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_derivativeness_text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_derivativeness_text]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_derivativeness_text</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remix_derivativeness_parameters</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[remix_derivativeness_parameters]</local-name>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias>remix_derivativeness_parameters</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[projects 2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>project_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[project_id (viewers.csv)]</local-name>
+            <parent-name>[viewers.csv]</parent-name>
+            <remote-alias>project_id</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_viewed</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date_viewed]</local-name>
+            <parent-name>[viewers.csv]</parent-name>
+            <remote-alias>date_viewed</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[viewers.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Block Types' datatype='integer' name='[block_types]' role='measure' type='quantitative' />
+      <column caption='Blocks' datatype='integer' name='[blocks]' role='measure' type='quantitative' />
+      <column caption='Date Created' datatype='datetime' name='[date_created]' role='dimension' type='ordinal' />
+      <column caption='Date Viewed' datatype='datetime' name='[date_viewed]' role='dimension' type='ordinal' />
+      <column caption='Downloaders Website' datatype='integer' name='[downloaders_website]' role='measure' type='quantitative' />
+      <column caption='Images' datatype='integer' name='[images]' role='measure' type='quantitative' />
+      <column caption='Is Remix' datatype='boolean' name='[is_remix]' role='dimension' type='nominal' />
+      <column caption='Is Remix Identical' datatype='string' name='[is_remix_identical]' role='dimension' type='nominal' />
+      <column caption='Is Remix Identical Code' datatype='string' name='[is_remix_identical_code]' role='dimension' type='nominal' />
+      <column caption='Is Remix Identical Code And Strings' datatype='string' name='[is_remix_identical_code_and_strings]' role='dimension' type='nominal' />
+      <column caption='Is Remix Identical Media' datatype='string' name='[is_remix_identical_media]' role='dimension' type='nominal' />
+      <column caption='Is Remixed' datatype='boolean' name='[is_remixed]' role='dimension' type='nominal' />
+      <column caption='Is Self Remix' datatype='boolean' name='[is_self_remix]' role='dimension' type='nominal' />
+      <column caption='Locked' datatype='boolean' name='[locked]' role='dimension' type='nominal' />
+      <column caption='Lovers Website' datatype='string' name='[lovers_website]' role='dimension' type='nominal' />
+      <column caption='Parent Project Id' datatype='string' name='[parent_project_id]' role='dimension' type='nominal' />
+      <column caption='Parent User Id' datatype='string' name='[parent_user_id]' role='dimension' type='nominal' />
+      <column caption='Project Id (Viewers.Csv)' datatype='integer' name='[project_id (viewers.csv)]' role='dimension' type='ordinal' />
+      <column caption='Project Id' datatype='integer' name='[project_id]' role='dimension' type='ordinal' />
+      <column caption='Remix Added Images' datatype='string' name='[remix_added_images]' role='dimension' type='nominal' />
+      <column caption='Remix Added Sounds' datatype='string' name='[remix_added_sounds]' role='dimension' type='nominal' />
+      <column caption='Remix Changed Images' datatype='string' name='[remix_changed_images]' role='dimension' type='nominal' />
+      <column caption='Remix Changed Sounds' datatype='string' name='[remix_changed_sounds]' role='dimension' type='nominal' />
+      <column caption='Remix Deleted Images' datatype='string' name='[remix_deleted_images]' role='dimension' type='nominal' />
+      <column caption='Remix Deleted Sounds' datatype='string' name='[remix_deleted_sounds]' role='dimension' type='nominal' />
+      <column caption='Remix Derivativeness' datatype='string' name='[remix_derivativeness]' role='dimension' type='nominal' />
+      <column caption='Remix Derivativeness Blocks' datatype='string' name='[remix_derivativeness_blocks]' role='dimension' type='nominal' />
+      <column caption='Remix Derivativeness Images' datatype='string' name='[remix_derivativeness_images]' role='dimension' type='nominal' />
+      <column caption='Remix Derivativeness Parameters' datatype='string' name='[remix_derivativeness_parameters]' role='dimension' type='nominal' />
+      <column caption='Remix Derivativeness Sounds' datatype='string' name='[remix_derivativeness_sounds]' role='dimension' type='nominal' />
+      <column caption='Remix Derivativeness Text' datatype='string' name='[remix_derivativeness_text]' role='dimension' type='nominal' />
+      <column caption='Remix Editdistance Code' datatype='string' name='[remix_editdistance_code]' role='dimension' type='nominal' />
+      <column caption='Remix Editdistance Code And Strings' datatype='string' name='[remix_editdistance_code_and_strings]' role='dimension' type='nominal' />
+      <column caption='Remix Editdistance Images' datatype='string' name='[remix_editdistance_images]' role='dimension' type='nominal' />
+      <column caption='Remix Editdistance Media' datatype='string' name='[remix_editdistance_media]' role='dimension' type='nominal' />
+      <column caption='Remix Editdistance Sounds' datatype='string' name='[remix_editdistance_sounds]' role='dimension' type='nominal' />
+      <column caption='Saves' datatype='string' name='[saves]' role='dimension' type='nominal' />
+      <column caption='Scripts Website' datatype='string' name='[scripts_website]' role='dimension' type='nominal' />
+      <column caption='Seconds To Remix' datatype='integer' name='[seconds_to_remix]' role='measure' type='quantitative' />
+      <column caption='Seconds To Share' datatype='string' name='[seconds_to_share]' role='dimension' type='nominal' />
+      <column caption='Sounds' datatype='integer' name='[sounds]' role='measure' type='quantitative' />
+      <column caption='Sprites Website' datatype='string' name='[sprites_website]' role='dimension' type='nominal' />
+      <column caption='Ugstrings' datatype='string' name='[ugstrings]' role='dimension' type='nominal' />
+      <column caption='User Id' datatype='integer' name='[user_id]' role='dimension' type='ordinal' />
+      <column caption='Viewers Website' datatype='integer' name='[viewers_website]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.682353' measure-ordering='alphabetic' measure-percentage='0.317647' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Unique_viewers' name='federated.1wqws780mzxyn91frg8qa0jee2gi' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1wqws780mzxyn91frg8qa0jee2gi'>
+            <column-instance column='[project_id (viewers.csv)]' derivation='None' name='[none:project_id (viewers.csv):ok]' pivot='key' type='ordinal' />
+            <column caption='Project Id (Viewers.Csv)' datatype='integer' name='[project_id (viewers.csv)]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1wqws780mzxyn91frg8qa0jee2gi].[none:project_id (viewers.csv):ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones use-insets='false' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1wqws780mzxyn91frg8qa0jee2gi].[none:project_id (viewers.csv):ok]</field>
+            <field>[federated.1wqws780mzxyn91frg8qa0jee2gi].[none:project_id:ok]</field>
+            <field>[federated.1wqws780mzxyn91frg8qa0jee2gi].[none:user_id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Sheet 1' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='384' name='Sheet 2' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
